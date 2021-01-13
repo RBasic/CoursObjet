@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1610534888 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\main.cpp
+	"Personnage.h"
+
+1610536276 c:\users\r.cham\documents\projets codeblocks\coursobjet\include\personnage.h
+	<string>
+	<iostream>
+
+1610536243 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\personnage.cpp
+	"Personnage.h"
+
