@@ -48,7 +48,7 @@ public:
     //AFFICHE LES INFOS DU PERSO
 	void showInfos();
 
-    void attackPlayer(Personnage & cible);
+    void attackPlayer(Personnage* cible);
 };
 
 #endif // PERSONNAGE_H

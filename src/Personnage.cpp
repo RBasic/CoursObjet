@@ -103,6 +103,8 @@ void Personnage::showInfos()
 	cout << "crit : " << getPercentCrit() * 100 << "%" << endl;
 }
 
-void Personnage::attackPlayer(Personnage & cible){
-    cible.setPv( cible.getPv() - getAttack() );
+void Personnage::attackPlayer(Personnage* cible){
+    //(*cible).setPv(50);
+    cible->setPv(50);
+    //cible.setPv( cible.getPv() - getAttack() );
 }

@@ -1,16 +1,6 @@
 #include "Personnage.h"
 
-
-void swapInt(int & x, int  & y){
-    cout<<"x = "<<x<< " y = "<<y<<endl;
-    int temp = x;
-    x = y;
-    y = temp;
-    cout<<"x = "<<x<< " y = "<<y<<endl;
-}
-
 int main() {
-
 	cout << "	personnage 1  "<<endl;
 	Personnage p1;
 	p1.setNom("Jean");
@@ -19,6 +9,8 @@ int main() {
 	p1.setPercentCrit(0.2);
 	p1.showInfos();
 	cout << endl;
+
+
 
 
 	cout << "	personnage 2  " << endl;
@@ -41,7 +33,7 @@ int main() {
 	cout << "Attack de p4 = "<<p4.getAttack()<<endl;
 	cout << "PV de P3 = "<<p3.getPv()<<endl;
 
-	p4.attackPlayer(p3);
+	p4.attackPlayer(&p3);
 
 	cout << "Attack de p4 = "<<p4.getAttack()<<endl;
 	cout << "PV de P3 = "<<p3.getPv()<<endl;
