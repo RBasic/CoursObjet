@@ -64,6 +64,22 @@ void Personnage::setAttack(int a)
 	}
 }
 
+
+int Personnage::getHeal()
+{
+	return heal;
+}
+
+void Personnage::setHeal(int h)
+{
+	if (h < 0) {
+		heal = 0;
+	}
+	else {
+		heal = h;
+	}
+}
+
 int Personnage::getDefense()
 {
 	return defense;
@@ -105,6 +121,9 @@ void Personnage::showInfos()
 
 void Personnage::attackPlayer(Personnage* cible){
     //(*cible).setPv(50);
-    cible->setPv(50);
-    //cible.setPv( cible.getPv() - getAttack() );
+    cible->setPv(cible->getPv() - getAttack());
+}
+
+void Personnage::healPlayer(Personnage* cible){
+    cible->setPv( cible->getPv() + getHeal());
 }

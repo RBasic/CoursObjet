@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <random>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ private:
 	int attack = 10;
 	int defense = 10;
 	float percentCrit = 0.1f;
+	int heal = 10;
 
 public:
     //CONSTRUCTEURS
@@ -33,6 +35,10 @@ public:
 	string getNom();
 	void setNom(string n);
 
+    //GETTER/SETTER HEAL
+	int getHeal();
+	void setHeal(int h);
+
     //GETTER/SETTER ATTACK
 	int getAttack();
 	void setAttack(int a);
@@ -49,6 +55,7 @@ public:
 	void showInfos();
 
     void attackPlayer(Personnage* cible);
+    void healPlayer(Personnage* cible);
 };
 
 #endif // PERSONNAGE_H

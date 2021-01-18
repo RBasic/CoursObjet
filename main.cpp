@@ -1,7 +1,7 @@
 #include "Personnage.h"
 
 int main() {
-	cout << "	personnage 1  "<<endl;
+
 	Personnage p1;
 	p1.setNom("Jean");
 	p1.setAttack(50);
@@ -9,9 +9,6 @@ int main() {
 	p1.setPercentCrit(0.2);
 	p1.showInfos();
 	cout << endl;
-
-
-
 
 	cout << "	personnage 2  " << endl;
 	Personnage p2(p1);
@@ -33,9 +30,20 @@ int main() {
 	cout << "Attack de p4 = "<<p4.getAttack()<<endl;
 	cout << "PV de P3 = "<<p3.getPv()<<endl;
 
+    cout <<"ATTACK"<<endl;
 	p4.attackPlayer(&p3);
 
 	cout << "Attack de p4 = "<<p4.getAttack()<<endl;
 	cout << "PV de P3 = "<<p3.getPv()<<endl;
+
+	cout << "heal de p2 = "<<p2.getHeal()<<endl;
+	cout << "PV de P3 = "<<p3.getPv()<<endl;
+
+    cout <<"HEAL"<<endl;
+	p2.healPlayer(&p3);
+
+	cout << "heal de p2 = "<<p2.getHeal()<<endl;
+	cout << "PV de P3 = "<<p3.getPv()<<endl;
+
     return 0;
 }
