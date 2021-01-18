@@ -21,6 +21,10 @@ public:
     Personnage(int p, int a, float pc);
     Personnage(string n);
 
+
+    //DESTRUCTEUR
+    ~Personnage();
+
     //GETTER/SETTER PV
 	int getPv();
 	void setPv(int s);
@@ -44,6 +48,7 @@ public:
     //AFFICHE LES INFOS DU PERSO
 	void showInfos();
 
+    void attackPlayer(Personnage & cible);
 };
 
 #endif // PERSONNAGE_H

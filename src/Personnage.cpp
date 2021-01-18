@@ -19,6 +19,11 @@ Personnage::Personnage(string n){
     nom = n;
 }
 
+Personnage::~Personnage(){
+    cout<<"Mon personnage a ete detruit"<<endl;
+}
+
+
 int Personnage::getPv()
 {
 	return pv;
@@ -96,4 +101,8 @@ void Personnage::showInfos()
 	cout << "attack : " << getAttack() << endl;
 	cout << "defense : " << getDefense() << endl;
 	cout << "crit : " << getPercentCrit() * 100 << "%" << endl;
+}
+
+void Personnage::attackPlayer(Personnage & cible){
+    cible.setPv( cible.getPv() - getAttack() );
 }
