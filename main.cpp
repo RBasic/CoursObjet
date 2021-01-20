@@ -1,7 +1,8 @@
 #include "Personnage.h"
+#include "Test.h"
 
 int main() {
-
+    srand(time(NULL));
 	Personnage p1;
 	p1.setNom("Jean");
 	p1.setAttack(50);
@@ -12,6 +13,8 @@ int main() {
 
 	cout << "	personnage 2  " << endl;
 	Personnage p2(p1);
+	p2.setNom("Richard");
+	p2.setAttack(600);
 	p2.showInfos();
 	cout << endl;
 
@@ -45,5 +48,17 @@ int main() {
 	cout << "heal de p2 = "<<p2.getHeal()<<endl;
 	cout << "PV de P3 = "<<p3.getPv()<<endl;
 
+	if(p1 == p2){
+        cout<<p1.getNom()<< " est egal a "<<p2.getNom()<<endl;
+	}else{
+        cout<<p1.getNom()<< " pas egal a "<<p2.getNom()<<endl;
+	}
+
+	Personnage fusion;
+	fusion = p2 + p3;
+    fusion.showInfos();
+
+    fusion += p4;
+    fusion.showInfos();
     return 0;
 }

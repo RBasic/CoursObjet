@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 #include <random>
+#include <ctime>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -14,7 +16,7 @@ private:
 	string nom = "Bob";
 	int attack = 10;
 	int defense = 10;
-	float percentCrit = 0.1f;
+	float percentCrit = 0.9f;
 	int heal = 10;
 
 public:
@@ -28,34 +30,39 @@ public:
     ~Personnage();
 
     //GETTER/SETTER PV
-	int getPv();
+	int getPv() const;
 	void setPv(int s);
 
     //GETTER/SETTER NOM
-	string getNom();
+	string getNom() const;
 	void setNom(string n);
 
     //GETTER/SETTER HEAL
-	int getHeal();
+	int getHeal() const;
 	void setHeal(int h);
 
     //GETTER/SETTER ATTACK
-	int getAttack();
+	int getAttack() const;
 	void setAttack(int a);
 
     //GETTER/SETTER DEFENSE
-	int getDefense();
+	int getDefense() const;
 	void setDefense(int d);
 
     //GETTER/SETTER PERCENT CRIT
-	float getPercentCrit();
+	float getPercentCrit() const;
 	void setPercentCrit(float d);
 
     //AFFICHE LES INFOS DU PERSO
-	void showInfos();
+	void showInfos() const;
 
     void attackPlayer(Personnage* cible);
     void healPlayer(Personnage* cible);
+
+    bool operator==(Personnage const & p);
+
+    Personnage operator+(Personnage const & p);
+    void operator+=(Personnage const & p);
 };
 
 #endif // PERSONNAGE_H

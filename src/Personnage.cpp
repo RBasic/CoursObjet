@@ -24,7 +24,7 @@ Personnage::~Personnage(){
 }
 
 
-int Personnage::getPv()
+int Personnage::getPv() const
 {
 	return pv;
 }
@@ -39,7 +39,7 @@ void Personnage::setPv(int s) {
 	}
 }
 
-string Personnage::getNom()
+string Personnage::getNom() const
 {
 	return nom;
 }
@@ -49,7 +49,7 @@ void Personnage::setNom(string n)
 	nom = n;
 }
 
-int Personnage::getAttack()
+int Personnage::getAttack() const
 {
 	return attack;
 }
@@ -65,7 +65,7 @@ void Personnage::setAttack(int a)
 }
 
 
-int Personnage::getHeal()
+int Personnage::getHeal() const
 {
 	return heal;
 }
@@ -80,7 +80,7 @@ void Personnage::setHeal(int h)
 	}
 }
 
-int Personnage::getDefense()
+int Personnage::getDefense() const
 {
 	return defense;
 }
@@ -95,7 +95,7 @@ void Personnage::setDefense(int d)
 	}
 }
 
-float Personnage::getPercentCrit()
+float Personnage::getPercentCrit() const
 {
 	return percentCrit;
 }
@@ -110,7 +110,7 @@ void Personnage::setPercentCrit(float d)
 	}
 }
 
-void Personnage::showInfos()
+void Personnage::showInfos() const
 {
 	cout << "nom : " << getNom() << endl;
 	cout << "pv : " << getPv() << endl;
@@ -120,10 +120,44 @@ void Personnage::showInfos()
 }
 
 void Personnage::attackPlayer(Personnage* cible){
-    //(*cible).setPv(50);
-    cible->setPv(cible->getPv() - getAttack());
+    float random = rand()%100;
+    if(random <= (getPercentCrit()*100)){
+        cout<<"CRIT"<<endl;
+        cible->setPv(cible->getPv() - (getAttack()*3));
+    }else{
+        cible->setPv(cible->getPv() - getAttack());
+    }
 }
 
 void Personnage::healPlayer(Personnage* cible){
-    cible->setPv( cible->getPv() + getHeal());
+    float random = rand()%100;
+    if(random <= (getPercentCrit()*100)){
+        cout<<"CRIT"<<endl;
+        cible->setPv( cible->getPv() + (getHeal()*3));
+    }else{
+        cible->setPv( cible->getPv() + getHeal());
+    }
+}
+
+bool Personnage::operator==(Personnage const & p){
+    return p.getPv() == getPv() && p.getAttack() == getAttack()&& p.getDefense() == getDefense()&& p.getHeal() == getHeal();
+}
+
+Personnage Personnage::operator+(Personnage const & p){
+    Personnage temp;
+    temp.setPv(getPv() + p.getPv());
+    temp.setAttack(getAttack() + p.getAttack());
+    temp.setDefense(getDefense() + p.getDefense());
+    temp.setHeal(getHeal() - p.getHeal());
+    temp.setPercentCrit(max(getPercentCrit(), p.getPercentCrit()));
+    return temp;
+}
+
+
+void Personnage::operator+=(Personnage const & p){
+    setPv(getPv() + p.getPv());
+    setAttack(getAttack() + p.getAttack());
+    setDefense(getDefense() + p.getDefense());
+    setHeal(getHeal() - p.getHeal());
+    setPercentCrit(max(getPercentCrit(), p.getPercentCrit()));
 }
