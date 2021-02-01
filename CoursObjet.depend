@@ -1,20 +1,26 @@
 # depslib dependency file v1.0
-1611142655 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\main.cpp
+1612198135 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\main.cpp
 	"Personnage.h"
-	"Test.h"
+	"Arme.h"
 
-1611143281 c:\users\r.cham\documents\projets codeblocks\coursobjet\include\personnage.h
+1612196158 c:\users\r.cham\documents\projets codeblocks\coursobjet\include\personnage.h
 	<string>
 	<iostream>
 	<random>
 	<ctime>
 	<stdlib.h>
 
-1611143556 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\personnage.cpp
+1612196151 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\personnage.cpp
 	"Personnage.h"
 
 1611139844 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\test.cpp
 	"Test.h"
 
 1611139765 c:\users\r.cham\documents\projets codeblocks\coursobjet\include\test.h
+
+1612198743 c:\users\r.cham\documents\projets codeblocks\coursobjet\include\arme.h
+	<string>
+
+1612198743 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\arme.cpp
+	"Arme.h"
 

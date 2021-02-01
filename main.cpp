@@ -1,9 +1,13 @@
 #include "Personnage.h"
-#include "Test.h"
+#include "Arme.h"
 
 int main() {
     srand(time(NULL));
 	Personnage p1;
+    Arme a1;
+
+    Arme a2(50,2,"feu",5,500);
+
 	p1.setNom("Jean");
 	p1.setAttack(50);
 	p1.setDefense(20);
@@ -48,10 +52,10 @@ int main() {
 	cout << "heal de p2 = "<<p2.getHeal()<<endl;
 	cout << "PV de P3 = "<<p3.getPv()<<endl;
 
-	if(p1 == p2){
-        cout<<p1.getNom()<< " est egal a "<<p2.getNom()<<endl;
-	}else{
+	if(p1 != p2){
         cout<<p1.getNom()<< " pas egal a "<<p2.getNom()<<endl;
+	}else{
+        cout<<p1.getNom()<< " egal a "<<p2.getNom()<<endl;
 	}
 
 	Personnage fusion;

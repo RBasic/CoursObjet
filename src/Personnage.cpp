@@ -139,7 +139,7 @@ void Personnage::healPlayer(Personnage* cible){
     }
 }
 
-bool Personnage::operator==(Personnage const & p){
+bool Personnage::operator==(Personnage & p){
     return p.getPv() == getPv() && p.getAttack() == getAttack()&& p.getDefense() == getDefense()&& p.getHeal() == getHeal();
 }
 
@@ -160,4 +160,8 @@ void Personnage::operator+=(Personnage const & p){
     setDefense(getDefense() + p.getDefense());
     setHeal(getHeal() - p.getHeal());
     setPercentCrit(max(getPercentCrit(), p.getPercentCrit()));
+}
+
+bool Personnage::operator!=(Personnage & p){
+    return !(p == *this);
 }

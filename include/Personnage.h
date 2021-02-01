@@ -59,10 +59,12 @@ public:
     void attackPlayer(Personnage* cible);
     void healPlayer(Personnage* cible);
 
-    bool operator==(Personnage const & p);
+    bool operator==(Personnage & p);
 
     Personnage operator+(Personnage const & p);
     void operator+=(Personnage const & p);
+
+    bool operator!=(Personnage & p);
 };
 
 #endif // PERSONNAGE_H
