@@ -7,6 +7,7 @@ Personnage::Personnage(){
 	attack = 0;
 	defense = 0;
 	percentCrit = 0.0f;
+	arme = new Arme();
 }
 
 Personnage::Personnage(int p,int a,float pc){
@@ -108,6 +109,15 @@ void Personnage::setPercentCrit(float d)
 	else {
 		percentCrit = d;
 	}
+}
+
+Arme* Personnage::getArme() const
+{
+    return arme;
+}
+
+void Personnage::setArme(Arme* a){
+    arme = a;
 }
 
 void Personnage::showInfos() const

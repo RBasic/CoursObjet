@@ -6,6 +6,7 @@
 #include <random>
 #include <ctime>
 #include <stdlib.h>
+#include "Arme.h"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ private:
 	int defense = 10;
 	float percentCrit = 0.9f;
 	int heal = 10;
+	Arme* arme;
 
 public:
     //CONSTRUCTEURS
@@ -52,6 +54,10 @@ public:
     //GETTER/SETTER PERCENT CRIT
 	float getPercentCrit() const;
 	void setPercentCrit(float d);
+
+	//GETTER/SETTER ARME
+	Arme* getArme() const;
+	void setArme(Arme* a);
 
     //AFFICHE LES INFOS DU PERSO
 	void showInfos() const;
