@@ -1,8 +1,8 @@
-#include "Personnage.h"
+#include "Guerrier.h"
 
 int main() {
     srand(time(NULL));
-	Personnage p1;
+	/*Personnage p1;
     Arme a1;
 
     Arme a2(50,2,"feu",5,500);
@@ -75,5 +75,11 @@ int main() {
 
     fusion += p4;
     fusion.showInfos();
+
+
+*/
+    Guerrier g(1000);
+    cout <<g.getPv()<<endl;
+    g.showInfos();
     return 0;
 }

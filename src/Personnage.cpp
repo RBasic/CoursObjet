@@ -8,6 +8,7 @@ Personnage::Personnage(){
 	defense = 0;
 	percentCrit = 0.0f;
 	arme = new Arme();
+	cout<<"Je suis un personnage"<<endl;
 }
 
 Personnage::Personnage(int p,int a,float pc){

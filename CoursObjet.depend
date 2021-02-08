@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1612348458 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\main.cpp
-	"Personnage.h"
+1612798979 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\main.cpp
+	"Guerrier.h"
 
 1612348274 c:\users\r.cham\documents\projets codeblocks\coursobjet\include\personnage.h
 	<string>
@@ -10,7 +10,7 @@
 	<stdlib.h>
 	"Arme.h"
 
-1612348306 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\personnage.cpp
+1612798399 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\personnage.cpp
 	"Personnage.h"
 
 1611139844 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\test.cpp
@@ -23,4 +23,10 @@
 
 1612198972 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\arme.cpp
 	"Arme.h"
+
+1612798944 source:c:\users\r.cham\documents\projets codeblocks\coursobjet\src\guerrier.cpp
+	"Guerrier.h"
+
+1612798588 c:\users\r.cham\documents\projets codeblocks\coursobjet\include\guerrier.h
+	"Personnage.h"
 
