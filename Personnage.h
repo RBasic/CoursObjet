@@ -62,6 +62,8 @@ public:
     //AFFICHE LES INFOS DU PERSO
 	void showInfos() const;
 
+  void test();
+
     void attackPlayer(Personnage* cible);
     void healPlayer(Personnage* cible);
 
