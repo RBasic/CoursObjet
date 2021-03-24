@@ -9,6 +9,7 @@ class Guerrier : public Personnage
     public:
     Guerrier();
     Guerrier(int hp);
+    void test();
 
     protected:
 
